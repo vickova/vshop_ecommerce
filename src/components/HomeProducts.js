@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const HomeProducts = ({active, setActive}) => {
   return (
-    <ProductStyle className='grid grid-cols-3 p-2 my-[5rem] mx-[3rem] gap-[4rem]' id='products'>
+    <ProductStyle className='xl:grid xl:grid-cols-3 p-2 my-[5rem] mx-[3rem] gap-[4rem] lg:grid-cols-2' id='products'>
         {
             home.map((items, i)=>{
               if(items.home){

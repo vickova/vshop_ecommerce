@@ -5,7 +5,7 @@ import Headphone from '../images/headphone.png';
 const Hero = () => {
   return (
     <div className='bg-[#f4cbd3] rounded-lg py-[2rem] px-[4rem] my-[1rem] mx-[3rem]'>
-        <div className='cover flex justify-between'>
+        <div className='cover xl:flex justify-between'>
             <div className='flex flex-col justify-center'>
             <h2 className='text-[5rem]'>
                 <span className='first block text-[2rem]'>Beats solo</span>

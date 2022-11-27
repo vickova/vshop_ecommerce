@@ -41,16 +41,16 @@ const reducer = (state=initState, action)=>{
                     cartList:state.cartList.filter((item)=> item.name !== action.payload)
                 }
             case 'BUTTONSTATE':
-                let category = action.payload.category;
-                const name = action.payload.name;
-                const id = action.payload
+                // let category = action.payload.category;
+                // const name = action.payload.name;
+                // const id = action.payload
                 // category = category.slice(0,1).toLowerCase()+ category.slice(1,category.length)
                 // console.log(state[category])
-                console.log({...home[id], active:true})
-                console.log(home)
+                // console.log({...home[id], active:true})
+                // console.log(home)
                 return{
                     ...state,
-                    home:[{...home[id], active:true}]
+                    home:[{...home[action.payload.id], active:true}]
                 }
                 
         default:

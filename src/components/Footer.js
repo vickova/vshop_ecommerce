@@ -37,7 +37,7 @@ const Footer = () => {
 
 const FooterStyle = styled.div`
     background-color:#f4cbd3;
-    display:flex;
+    /* display:flex; */
     justify-content:space-between;
     padding:2rem;
     margin-top:5rem;
@@ -106,6 +106,13 @@ const FooterStyle = styled.div`
         background-color:#971425;
         color:#dbe0e0;
         font-weight:500;
+        }
+    }
+    @media screen and (max-width: 680px){
+        display:block;
+        .section{
+            width:100%;
+            border-right:none;
         }
     }
 `

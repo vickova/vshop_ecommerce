@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const Smile = () => {
   return (
-    <SmileStyle>
+    <SmileStyle className='xl:flex block'>
         <div className='smile'>
             <p>20% OFF</p>
             <h2>FINE SMILE</h2>
@@ -25,10 +25,10 @@ const SmileStyle = styled.div`
     margin:1rem 5rem;
     margin-top:10rem;
     background-color:#f0f0f0;
-    height:55vh;
+    /* height:55vh; */
     border-radius:10px;
     padding:2rem 4rem;
-    display:flex;
+    /* display:flex; */
     justify-content:space-between;
     align-items:center;
     .smile{
