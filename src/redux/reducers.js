@@ -1,4 +1,5 @@
 import { act } from "react-dom/test-utils";
+import Items from "../components/Items";
 import { home, electronics, cloth, furniture, books, cosmetics } from "../utils";
 const initState = {
     cartState:false,
@@ -15,14 +16,26 @@ const reducer = (state=initState, action)=>{
                 cartState:!state.cartState
             }
         case 'CARTEDLIST':
+            // console.log(state.home)
             return{
                 ...state,
-                cartList:[...state.cartList,action.payload],
+                cartList:[...state.cartList, action.payload]
             }
-            case 'INCREASE':
+            case 'HOMEFRESH':
+                console.log(state.home)
                 return{
                     ...state,
-                    cartList:[...state.cartList,action.payload],
+                    home: [...home.map((item)=>{
+                        if(item.id === action.payload.id){
+                            console.log(state.home)
+                            console.log(item)
+                            item.active = true
+                            return{
+                                ...item
+                            }
+                        }
+                        return {...item}
+                    })],
                 }
             case 'CARTEDINCREASE':
                 return{
@@ -38,21 +51,18 @@ const reducer = (state=initState, action)=>{
                 console.log(state.cartList)
                 return{
                     ...state,
-                    cartList:state.cartList.filter((item)=> item.name !== action.payload)
+                    cartList:state.cartList.filter((item)=> item.name !== action.payload),
+                    home: [...home.map((item)=>{
+                        if(item.name === action.payload){
+                            item.active = false
+                            return{
+                                ...item
+                            }
+                        }
+                        return {...item}
+                    })],
                 }
-            case 'BUTTONSTATE':
-                // let category = action.payload.category;
-                // const name = action.payload.name;
-                // const id = action.payload
-                // category = category.slice(0,1).toLowerCase()+ category.slice(1,category.length)
-                // console.log(state[category])
-                // console.log({...home[id], active:true})
-                // console.log(home)
-                return{
-                    ...state,
-                    home:[{...home[action.payload.id], active:true}]
-                }
-                
+
         default:
             return state
     }

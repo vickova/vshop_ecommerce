@@ -1,24 +1,31 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
-import { cartedList, cartedCount, cartActive } from '../redux/actions';
+import { cartedList, cartedCount, homeFresh } from '../redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
+import { act } from 'react-dom/test-utils';
+import Items from './Items';
 
 
 
-const ProductCard = ({category, name, description, image, amount, count, items, active, setActive, id}) => {
+const ProductCard = ({category, name, description, image, amount, count, items, id, active}) => {
   const dispatch = useDispatch();
+  const activeState = useSelector((state)=>state.active)
   // console.log(carted)
-
   const CartClick = ()=>{
-    dispatch(cartedCount())
-    dispatch(cartedList({name:name, category:category, image:image, amount:amount, count:count, active:!active, items}));
-    dispatch(cartActive(id))
+    console.log('Yes')
     console.log(items)
-    return{...items, active:!active}
+    console.log({name:name, category:category, image:image, amount:amount, count:count, active:active})
+    dispatch(cartedList(items));
+    dispatch(homeFresh(items))
+    dispatch(cartedCount())
   }
+
   return (
     <CardStyle className='bg-[#FFF] shadow-md p-[1rem] flex flex-col justify-between gap-[1rem]'>
+      <div className='flex justify-between' >
         <h2 className='text-[1.5rem] font-semibold'>{category}</h2>
+        <p className='bg-[#f4cbd3] px-[.8rem] py-[.5rem] rounded-[5px] text-[black] font-bold'>${items.amount}</p>
+        </div>
         <div className='flex justify-center'>
           <img src={image} alt={name} />
         </div>
@@ -29,6 +36,8 @@ const ProductCard = ({category, name, description, image, amount, count, items, 
 }
 
 const CardStyle = styled.div`
-    
+    @media screen and (max-width:680px){
+      margin: .8rem 0;
+    }
 `
 export default ProductCard

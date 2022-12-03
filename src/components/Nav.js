@@ -8,18 +8,21 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import {cartAction} from '../redux/actions';
+import Burger from '../components/Burger'
 
 const Nav = ({cart, setCart}) => {
     const dispatch = useDispatch();
     const count = useSelector((state)=>state.cartCount);
     const {pathname} = useLocation();
+    const [menu, setMenu] = useState(false)
     // console.log(pathname)
     // console.log(count)
   return (
-    <NavStyle className='block bg-blue'>
+    <NavStyle className='block bg-blue' menu={menu}>
+        <div className='sect'>
         <h2><span>V</span>-shop</h2>
         <div className='menu-sec'>
-            <img src={Menu} alt="menu" className='menu'/>
+            <Burger menu={menu} setMenu={setMenu}/>
             <div className='options'>
                 <img src={Close} alt="exit" className='close'/>
                 <ul>
@@ -62,6 +65,7 @@ const Nav = ({cart, setCart}) => {
                 </ul>
             </div>
         </div>
+        </div>
         <div className='cart' onClick={()=>dispatch(cartAction())}>
             <img src={Cart} alt="cart" />
             <p>{count}</p>
@@ -82,6 +86,11 @@ const NavStyle = styled.div`
     width:100%;
     margin:0;
     z-index:2;
+    .sect{
+        display:flex;
+        justify-content:space-between;
+        width: 70%;
+    }
     h2{
         font-size:2rem;
         span{
@@ -128,6 +137,38 @@ const NavStyle = styled.div`
             top:-15px;
             left:15px;
             border-radius:50%;
+        }
+    }
+    @media screen and (max-width:680px){
+        h2{
+            font-size:1.5rem;
+        }
+        padding:1rem;
+        .sect{
+            flex-direction:row-reverse;
+        }
+        .options{
+            ul{
+                display:${({menu})=>menu?'block':'none'};
+                position:fixed;
+                background-color:#fff;
+                width:50%;
+                height:100%;
+                left:0;
+                padding:1rem;
+                z-index:2;
+            }
+        }
+        .cart{
+            img{
+                width:20px;
+                height:20px;
+            }
+            p{
+                padding:.1rem .2rem;
+                font-size:.8rem;
+                left:8px;
+            }
         }
     }
 `

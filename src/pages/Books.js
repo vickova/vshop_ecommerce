@@ -1,16 +1,17 @@
 import React from 'react';
 import ProductCard from '../components/ProductCard';
-import { home } from '../utils';
+import { useSelector } from 'react-redux';
 
 const Books = () => {
+  const products = useSelector((state)=> state.home)
   return (
     <div className='grid grid-cols-3 p-2 my-[5rem] mx-[3rem] gap-[4rem] mt-[11rem]'>
         {
-            home.map((items, i)=>{
+            products.map((items, i)=>{
               if(items.category === 'Books'){
                 return(
-                <ProductCard key={i} name={items.name} description={items.description} 
-                category={items.category} image={items.image} amount={items.amount} count={items.count}/>
+                <ProductCard key={items.id} name={items.name} description={items.description} 
+                category={items.category} image={items.image} amount={items.amount} count={items.count} items={items} id={items.id}active={items.active}/>
                 )
               }
             })

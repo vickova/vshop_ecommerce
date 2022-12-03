@@ -110,9 +110,28 @@ const FooterStyle = styled.div`
     }
     @media screen and (max-width: 680px){
         display:block;
+        padding:1rem;
         .section{
             width:100%;
             border-right:none;
+        }
+        .top{
+            p{
+                margin:1rem 0;
+            }
+        }
+        h3{
+            margin:1rem 0;
+            span{
+                font-size:2rem;
+            }
+        }
+        form{
+            button{
+                padding:0 1.8rem;
+                font-size:1rem;
+                font-weight:500;
+            }
         }
     }
 `

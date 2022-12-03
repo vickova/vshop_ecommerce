@@ -13,13 +13,12 @@ import { Route, Routes } from 'react-router-dom';
 import { act } from 'react-dom/test-utils';
 
 function App() {
-  const [active, setActive] = useState(null);
   return (
     <div className="App">
       <GlobalStyle/>
       <Nav/>
       <Routes>
-        <Route path='/' element={<Home active={active} setActive={setActive}/>}/>
+        <Route path='/' element={<Home/>}/>
         <Route path='/electronics' element={<Electronics/>}/>
         <Route path='/furnitures' element={<Furniture/>}/>
         <Route path='/books' element={<Books/>}/>

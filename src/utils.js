@@ -57,98 +57,6 @@ import { Fragment } from 'react';
 
 
 export let home = [
-    // {
-    //     image:SAMSUNG,
-    //     name:'EarPhone',
-    //     category:'Electronics',
-    //     description:"SAMSUNG LC49RG90SSNXZA 49-Inch CRG9 Curved Gaming Monitor, Black, QHD, 120Hz",
-    // home:false,
-    //     amount:80,
-    //     count:1,
-    //     active:false,
-    // },
-    // {
-    //     image:DRESS1,
-    //     name:'Female dress black color gown',
-    //     category:'Cloth',
-    //     description:"Female dress black color gown - JUSYEA J5-W Tablets Ultra-Portable - RAM 4GB | 64GB Expandable - 8000mAh Battery - WiFi —Mouse | Keyboard and More -Black",
-    //     home:false,
-    //     amount:40,
-    //     count:1,
-    //     active:false,
-    // },
-    // {
-    //     image:CS6,
-    //     name:'CC+ Nude Glow Lightweight Foundation',
-    //     category:'Cosmetics',
-    //     description:"CC+ Nude Glow Lightweight Foundation + Glow Serum with SPF 40 - With Niacinamide,",
-    // home:false,
-    //     amount:80,
-    //     count:1,
-    //     active:false,
-    // },
-    // {
-    //     image:B3,
-    //     name:'And There Was Light',
-    //     category:'Books',
-    //     description:"And There Was Light: Abraham Lincoln and the American Struggle",
-    // home:false,
-    //     amount:24.43,
-    //     count:1,
-    //     active:false,
-    // },
-    // {
-    //     image:G4,
-    //     name:'EarPhone',
-    //     category:'Electronics',
-    //     description:"are a pair of small loudspeaker drivers worn on or around the head over a user's ears. They are electroacoustic transducers, which convert an electrical signal to a corresponding sound",
-    //     home:false,
-    //     amount:24.43,
-    //     count:1,
-    //     active:false,
-    // },
-    // {
-    //     image:DRESS7,
-    //     name:'Dress',
-    //     category:'cloth',
-    //     description:"2022 Tablet 10.1 inch Android 10.0 - JUSYEA J5-W Tablets Ultra-Portable - RAM 4GB | 64GB Expandable - 8000mAh Battery - WiFi —Mouse | Keyboard and More -Black",
-    //     home:false,
-    //     amount:34.43,
-    //     count:1,
-    //     active:false,
-    // },
-    // {
-    //     image:CS7,
-    //     name:'198 Piece Set',
-    //     category:'Cosmetics',
-    //     description:"MISS ROSE M 190 Colors Cosmetic Makeup Palette Set Kit Combination,Professional",
-    //     home:false,
-    //     amount:64.43,
-    //     count:1,
-    //     active:false,
-    // },
-    // {
-    //     image:B4,
-    //     name:'The Body Keeps the Score',
-    //     category:'Books',
-    //     description:"The Body Keeps the Score: Brain, Mind, and Body in the Healing of Trauma",
-    //     home:false,
-    //     amount:11.40,
-    //     count:1,
-    //     active:false,
-    // },
-    // {
-    //     name:'Tufted Ottoman Stool',
-    //     image:F3,
-    //     category:'furniture',
-    //     description:"Amazon Brand – Rivet Mid-Century Modern Tufted Ottoman Stool with Metal Base, 26.8W, Stucco",
-    // home:false,
-    //     amount:48.26,
-    //     count:1,
-    //     active:false,
-    // },
-
-
     {
         image:HD1,
         name:'EarPhone',
@@ -158,6 +66,7 @@ export let home = [
         amount:40,
         count:1,
         active:false,
+        id:1
     },
     {
         image:HD4,
@@ -168,6 +77,7 @@ export let home = [
         amount:24.43,
         count:1,
         active:false,
+        id:2
     },
     {
         image:SAMSUNG,
@@ -178,6 +88,7 @@ export let home = [
         amount:100,
         count:1,
         active:false,
+        id:3
     },
     {
         image:ACER,
@@ -188,6 +99,7 @@ export let home = [
         amount:20.67,
         count:1,
         active:false,
+        id:4
     },
     {
         image:HD6,
@@ -198,6 +110,7 @@ export let home = [
         amount:100,
         count:1,
         active:false,
+        id:5
     },
     {
         image:HD7,
@@ -208,6 +121,7 @@ export let home = [
         amount:45,
         count:1,
         active:false,
+        id:6
     },
     {
         image:HD9,
@@ -218,6 +132,7 @@ export let home = [
         amount:24.43,
         count:1,
         active:false,
+        id:7
     },
     {
         image:HD14,
@@ -228,6 +143,7 @@ export let home = [
         amount:56.23,
         count:1,
         active:false,
+        id:8
     },
     {
         image:G4,
@@ -238,6 +154,7 @@ export let home = [
         amount:24.43,
         count:1,
         active:false,
+        id:9
     },
 
 
@@ -250,6 +167,7 @@ export let home = [
         amount:34.43,
         count:1,
         active:false,
+        id:10
     },
     {
         image:DRESS2,
@@ -260,6 +178,7 @@ export let home = [
         amount:24.43,
         count:1,
         active:false,
+        id:11
     },
     {
         image:DRESS3,
@@ -270,6 +189,7 @@ export let home = [
         amount:44.46,
         count:1,
         active:false,
+        id:12
     },
     {
         image:DRESS4,
@@ -280,6 +200,7 @@ export let home = [
         amount:24.43,
         count:1,
         active:false,
+        id:13
     },
     {
         image:DRESS5,
@@ -290,6 +211,7 @@ export let home = [
         amount:57.43,
         count:1,
         active:false,
+        id:14
     },
     {
         image:DRESS1,
@@ -300,6 +222,7 @@ export let home = [
         amount:40,
         count:1,
         active:false,
+        id:15
     },
     {
         image:DRESS7,
@@ -310,6 +233,7 @@ export let home = [
         amount:34.43,
         count:1,
         active:false,
+        id:16
     },
     {
         image:MEN1,
@@ -320,6 +244,7 @@ export let home = [
         amount:24.43,
         count:1,
         active:false,
+        id:17
     },
     {
         image:MEN2,
@@ -330,6 +255,7 @@ export let home = [
         amount:24.43,
         count:1,
         active:false,
+        id:1
     },
     {
         image:MEN3,
@@ -340,6 +266,7 @@ export let home = [
         amount:24.43,
         count:1,
         active:false,
+        id:18
     },
     {
         image:MEN4,
@@ -350,6 +277,7 @@ export let home = [
         amount:32.99,
         count:1,
         active:false,
+        id:19
     },
     {
         image:MEN5,
@@ -360,6 +288,7 @@ export let home = [
         amount:64.43,
         count:1,
         active:false,
+        id:20
     },
     {
         image:MEN6,
@@ -370,6 +299,7 @@ export let home = [
         amount:54.43,
         count:1,
         active:false,
+        id:21
     },
     {
         image:MEN7,
@@ -380,6 +310,7 @@ export let home = [
         amount:24.43,
         count:1,
         active:false,
+        id:22
     },
     {
         image:DRESS8,
@@ -390,6 +321,7 @@ export let home = [
         amount:46.96,
         count:1,
         active:false,
+        id:23
     },
     {
         image:CS1,
@@ -400,6 +332,7 @@ export let home = [
         amount:24.43,
         count:1,
         active:false,
+        id:24
     },
     {
         image:CS2,
@@ -410,6 +343,7 @@ export let home = [
         amount:89.9,
         count:1,
         active:false,
+        id:25
     },
     {
         image:CS3,
@@ -420,6 +354,7 @@ export let home = [
         amount:24.43,
         count:1,
         active:false,
+        id:26
     },
     {
         image:CS4,
@@ -430,6 +365,7 @@ export let home = [
         amount:28.6,
         count:1,
         active:false,
+        id:27
     },
     {
         image:CS5,
@@ -440,6 +376,7 @@ export let home = [
         amount:44.44,
         count:1,
         active:false,
+        id:28
     },
     {
         image:CS6,
@@ -450,6 +387,7 @@ export let home = [
         amount:24.43,
         count:1,
         active:false,
+        id:29
     },
     {
         image:CS7,
@@ -460,6 +398,7 @@ export let home = [
         amount:64.43,
         count:1,
         active:false,
+        id:30
     },
     {
         image:CS8,
@@ -470,6 +409,7 @@ export let home = [
         amount:34.54,
         count:1,
         active:false,
+        id:31
     },
     {
         image:CS9,
@@ -480,6 +420,7 @@ export let home = [
         amount:24.43,
         count:1,
         active:false,
+        id:32
     },
 
     {
@@ -491,6 +432,7 @@ export let home = [
         amount:11.9,
         count:1,
         active:false,
+        id:33
     },
     {
         image:B2,
@@ -501,6 +443,7 @@ export let home = [
         amount:20.99,
         count:1,
         active:false,
+        id:34
     },
     {
         image:B3,
@@ -511,6 +454,7 @@ export let home = [
         amount:24.43,
         count:1,
         active:false,
+        id:35
     },
     {
         image:B4,
@@ -521,6 +465,7 @@ export let home = [
         amount:11.40,
         count:1,
         active:false,
+        id:36
     },
     {
         image:B5,
@@ -531,6 +476,7 @@ export let home = [
         amount:14.63,
         count:1,
         active:false,
+        id:37
     },
     {
         image:B7,
@@ -541,6 +487,7 @@ export let home = [
         amount:20.07,
         count:1,
         active:false,
+        id:38
     },
     {
         image:B6,
@@ -551,6 +498,7 @@ export let home = [
         amount:12.98,
         count:1,
         active:false,
+        id:39
     },
     {
         image:B8,
@@ -561,6 +509,7 @@ export let home = [
         amount:11.60,
         count:1,
         active:false,
+        id:40
     },
     {
         image:B9,
@@ -571,6 +520,7 @@ export let home = [
         amount:4.09,
         count:1,
         active:false,
+        id:41
     },
 
     {
@@ -582,6 +532,7 @@ export let home = [
         amount:46.99,
         count:1,
         active:false,
+        id:42
     },
     {
         name:'Nightstand',
@@ -592,6 +543,7 @@ export let home = [
         amount:89,
         count:1,
         active:false,
+        id:43
     },
     {
         name:'Tufted Ottoman Stool',
@@ -602,6 +554,7 @@ export let home = [
         amount:48.26,
         count:1,
         active:false,
+        id:44
     },
     {
         name:'X Stool',
@@ -612,6 +565,7 @@ export let home = [
         amount:79.41,
         count:1,
         active:false,
+        id:45
     },
     {
         name:'Stretch Recliner',
@@ -622,6 +576,7 @@ export let home = [
         amount:69.99,
         count:1,
         active:false,
+        id:46
     },
     {
         name:'ROMOON Dresser',
@@ -632,6 +587,7 @@ export let home = [
         amount:73.99,
         count:1,
         active:false,
+        id:47
     },
     {
         name:'3-Tier Shoe Rack',
@@ -642,6 +598,7 @@ export let home = [
         amount:37.99,
         count:1,
         active:false,
+        id:48
     },
     {
         name:'Laundry Hamper',
@@ -652,6 +609,7 @@ export let home = [
         amount:22.99,
         count:1,
         active:false,
+        id:49
     },
     {
         name:'Flash Furniture Kids',
@@ -662,5 +620,6 @@ export let home = [
         amount:67,
         count:1,
         active:false,
+        id:50
     },
 ]

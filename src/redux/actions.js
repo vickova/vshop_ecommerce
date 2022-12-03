@@ -5,10 +5,17 @@ export const cartAction = ()=>{
 }
 
 export const cartedList = (carted)=>{
-    console.log(carted)
+    // console.log(carted)
+    console.log('Yellow')
     return{
         type:'CARTEDLIST',
         payload:carted
+    }
+}
+export const homeFresh = (items)=>{
+    return{
+        type:'HOMEFRESH',
+        payload:items
     }
 }
 export const cartedCount = ()=>{
@@ -31,16 +38,16 @@ export const cartedDecrease = ()=>{
 //         type:'DECREASE',
 //     }
 // }
-export const deleted = (filtered, id)=>{
+export const deleted = (filtered)=>{
     console.log(filtered)
     return{
         type:'DELETE',
         payload:filtered
     }
 }
-export const cartActive = (id)=>{
-    return{
-        type:'BUTTONSTATE',
-        payload:id
-    }
-}
+// export const cartActive = (id)=>{
+//     return{
+//         type:'BUTTONSTATE',
+//         payload:id
+//     }
+// }
