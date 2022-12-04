@@ -24,7 +24,7 @@ const ProductCard = ({category, name, description, image, amount, count, items, 
     <CardStyle className='bg-[#FFF] shadow-md p-[1rem] flex flex-col justify-between gap-[1rem]'>
       <div className='flex justify-between' >
         <h2 className='text-[1.5rem] font-semibold'>{category}</h2>
-        <p className='bg-[#f4cbd3] px-[.8rem] py-[.5rem] rounded-[5px] text-[black] font-bold'>${amount}</p>
+        <p className='bg-[#f4cbd3] px-[.8rem] py-[.5rem] rounded-[25px] text-[black] font-bold'>${amount}</p>
         </div>
         <div className='flex justify-center'>
           <img src={image} alt={name} />

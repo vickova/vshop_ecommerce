@@ -50,7 +50,7 @@ const HeroStyle = styled.div`
             margin:1rem 0;
             }
             button{
-                padding:.65rem 4rem;
+                padding:.4rem 4rem;
                 font-size:1rem;
                 font-weight:400;
                 width:80%;

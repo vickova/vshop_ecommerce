@@ -22,10 +22,9 @@ const Furniture = () => {
 }
 
 const FurnitureStyle = styled.div`
-margin-top:10rem;
 @media screen and (max-width:680px){
       margin: 0 1rem;
-      margin-top:5rem;
+      margin-top:0;
     }
 `
 export default Furniture

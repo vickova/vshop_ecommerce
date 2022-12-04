@@ -85,9 +85,9 @@ const SmileStyle = styled.div`
         .smile{
             img{
                 left:150px;
-                top:-80px;
-                height:200px;
-                width:250px;
+                top:-40px;
+                height:180px;
+                width:300px;
             }
         h2{
             font-size:3rem;

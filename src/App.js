@@ -10,6 +10,7 @@ import Furniture from './pages/Furniture';
 import Cloth from './pages/Cloth';
 import Books from './pages/Books';
 import { Route, Routes } from 'react-router-dom';
+import Search from './components/Search';
 import { act } from 'react-dom/test-utils';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
       <GlobalStyle/>
       <Nav/>
+      <Search/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/electronics' element={<Electronics/>}/>
