@@ -34,10 +34,10 @@ const HeroStyle = styled.div`
                 font-size:1.5rem;
             }
             .sec{
-                font-size:2.2rem;
+                font-size:2rem;
             }
             .third{
-                font-size:2.5rem;
+                font-size:2.3rem;
             }
         }
             h3{
