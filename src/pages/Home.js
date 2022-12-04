@@ -16,5 +16,8 @@ const Home = ({active, setActive}) => {
 
 const HomeStyle = styled.div`
     margin-top:10rem;
+    @media screen and (max-width:680px){
+      margin-top:6rem;
+    }
 `
 export default Home

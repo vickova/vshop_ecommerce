@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 const HomeProducts = () => {
   const products = useSelector((state)=> state.home)
   return (
-    <ProductStyle className='xl:grid xl:grid-cols-3 p-2 my-[5rem] mx-[3rem] gap-[4rem] lg:grid-cols-2 mx:block md:w-[100%]' id='products'>
+    <ProductStyle className='xl:grid xl:grid-cols-3 p-2 my-[5rem] mx-[3rem] gap-[4rem] lg:grid-cols-2 mx:block' id='products'>
         {
             products.map((items, i)=>{
               if(items.home){

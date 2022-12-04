@@ -1,11 +1,12 @@
 import React from 'react';
 import ProductCard from '../components/ProductCard';
 import { useSelector } from 'react-redux';
+import styled from 'styled-components';
 
 const Cosmetics = () => {
   const products = useSelector((state)=> state.home)
   return (
-    <div className='grid grid-cols-3 p-2 my-[5rem] mx-[3rem] gap-[4rem] mt-[11rem]'>
+    <CosmeticStyle className='xl:grid xl:grid-cols-3 p-2 my-[5rem] mx-[3rem] gap-[4rem] lg:grid-cols-2 mx:block'>
         {
             products.map((items, i)=>{
               if(items.category === 'Cosmetics'){
@@ -16,8 +17,14 @@ const Cosmetics = () => {
               }
             })
         }
-    </div>
+    </CosmeticStyle>
   )
 }
-
+const CosmeticStyle = styled.div`
+margin-top:10rem;
+@media screen and (max-width:680px){
+      margin: 0 1rem;
+      margin-top:5rem;
+    }
+`
 export default Cosmetics

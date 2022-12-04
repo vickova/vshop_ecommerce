@@ -1,11 +1,12 @@
 import React from 'react';
 import ProductCard from '../components/ProductCard';
 import { useSelector } from 'react-redux';
+import styled from 'styled-components';
 
 const Books = () => {
   const products = useSelector((state)=> state.home)
   return (
-    <div className='grid grid-cols-3 p-2 my-[5rem] mx-[3rem] gap-[4rem] mt-[11rem]'>
+    <BookStyle className='xl:grid xl:grid-cols-3 p-2 my-[5rem] mx-[3rem] gap-[4rem] lg:grid-cols-2 mx:block'>
         {
             products.map((items, i)=>{
               if(items.category === 'Books'){
@@ -16,8 +17,15 @@ const Books = () => {
               }
             })
         }
-    </div>
+    </BookStyle>
   )
 }
 
+const BookStyle = styled.div`
+margin-top:10rem;
+@media screen and (max-width:680px){
+      margin: 0 1rem;
+      margin-top:5rem;
+    }
+`
 export default Books

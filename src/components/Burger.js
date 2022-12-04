@@ -12,7 +12,7 @@ const Burger = ({menu, setMenu}) => {
 }
 
 const StyledBurger = styled.button`
-    display: flex; 
+    display: none; 
     flex-direction: column; 
     justify-content: space-around; 
     width: 1.8rem; 
@@ -45,6 +45,9 @@ const StyledBurger = styled.button`
             transform: ${({ menu }) => menu ? 'translateX(20px)' : 'translateX(0)'}; } 
             :nth-child(3) { transform: ${({ menu }) => menu ? 'rotate(-55deg)' : 'rotate(0)'}; }
           }
+        }
+        @media screen and (max-width:680px){
+          display:flex;
         }
 `
 export default Burger
