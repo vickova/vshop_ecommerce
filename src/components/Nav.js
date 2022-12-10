@@ -61,7 +61,7 @@ const Nav = ({cart, setCart}) => {
                         </Link>
                     </div>
                     <div>
-                        <Link to='furnitures'>
+                        <Link to='furnitures' onClick={ScrollControl}>
                         <li style={{color:`${pathname === '/furnitures'? '#2f2e2e':''}`}}>Furnitures</li>
                         <div className={`line ${pathname==='/furnitures'? 'w-[80%] h-[10px] bg-[#121212]':'0%'}`}></div>
                         </Link>

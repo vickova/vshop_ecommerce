@@ -32,7 +32,6 @@ const ProductStyle = styled.div`
     @media screen and (max-width:680px){
       margin: 0 1rem;
       display:grid;
-      grid-template-columns:1fr 1fr;
     }
 `
 export default HomeProducts
