@@ -12,20 +12,23 @@ import Books from './pages/Books';
 import { Route, Routes } from 'react-router-dom';
 import Search from './components/Search';
 import { act } from 'react-dom/test-utils';
+import SearchItem from './components/SearchItem';
 
 function App() {
+  const [search, setSearch] = useState('');
+  const [products, setProducts] = useState([])
   return (
     <div className="App">
       <GlobalStyle/>
       <Nav/>
-      <Search/>
       <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/' element={<Home search={search} setSearch={setSearch} products={products} setProducts={setProducts}/>}/>
         <Route path='/electronics' element={<Electronics/>}/>
         <Route path='/furnitures' element={<Furniture/>}/>
         <Route path='/books' element={<Books/>}/>
         <Route path='/cloths' element={<Cloth/>}/>
         <Route path='/cosmetics' element={<Cosmetics/>}/>
+        <Route path='/search' element={<SearchItem products={products}/>}/>
       </Routes>
       <Cart/>
       <Footer/>

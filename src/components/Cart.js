@@ -4,13 +4,13 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import Items from './Items';
 import styled from 'styled-components';
+import { countIncrease, countDecrease } from '../redux/actions';
 
 const Cart = ({cart, setCart}) => {
   const cartState = useSelector((state)=> state.cartState);
   const cartedList = useSelector((state)=> state.cartList);
   const [totalValue, setTotalValue] = useState(0)
   const [prev, setPrev ] = useState(0)
-  console.log(cartedList)
 
 
 useEffect(()=>{
@@ -20,7 +20,7 @@ useEffect(()=>{
   return (
     <CartStyle className={`${cartState?'fixed':'static'} h-full bg-red-500 ${cartState?'block':'hidden'} p-[1rem] bg-white right-0 top-[60px] z-10 w-[50%] bg-red`}>
         <h2 className='text-center text-[1.5rem] font-bold'>Carted</h2>
-        <div className='overflow-auto h-[80%]'>
+        <div className='overflow-auto h-[70%]'>
           {
             cartedList.map((item, i)=>{
               return(
@@ -37,6 +37,7 @@ useEffect(()=>{
   )
 }
 const CartStyle = styled.div`
+overflow:auto;
   @media screen and (max-width:680px){
     padding:0;
     width:100%;

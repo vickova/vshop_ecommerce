@@ -3,10 +3,13 @@ import Hero from '../components/Hero';
 import HomeProducts from '../components/HomeProducts';
 import styled from 'styled-components';
 import Smile from '../components/Smile';
+import Search from '../components/Search';
 
-const Home = ({active, setActive}) => {
+const Home = ({active, setActive, search, setSearch, products, setProducts}) => {
+  console.log(products)
   return (
     <HomeStyle>
+      <Search search={search} setSearch={setSearch} products={products} setProducts={setProducts}/>
         <Hero/>
         <HomeProducts/>
         <Smile/>
@@ -15,8 +18,8 @@ const Home = ({active, setActive}) => {
 }
 
 const HomeStyle = styled.div`
-    @media screen and (max-width:680px){
-      margin-top:0;
+margin-top:5  rem;
+@media screen and (max-width:680px){
     }
 `
 export default Home

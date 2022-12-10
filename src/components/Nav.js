@@ -17,41 +17,45 @@ const Nav = ({cart, setCart}) => {
     const [menu, setMenu] = useState(false)
     // console.log(pathname)
     // console.log(count)
+    const ScrollControl = ()=>{
+        window.scrollTo({top: 0, behavior: 'smooth'});
+        setMenu(false)
+    }
   return (
     <NavStyle className='block bg-blue' menu={menu}>
         <div className='sect'>
-        <h2><span>V</span>-shop</h2>
+        <h2> <Link to='/' onClick={()=>window.scrollTo({top: 0, behavior: 'smooth'})}><span>V</span>-shop</Link></h2>
         <div className='menu-sec'>
             <Burger menu={menu} setMenu={setMenu}/>
             <div className='options'>
                 <img src={Close} alt="exit" className='close'/>
                 <ul>
                     <div className='bg-blue'>
-                        <Link to='/'>
+                        <Link to='/' onClick={ScrollControl}>
                         <li style={{color:`${pathname === '/'? '#2f2e2e':''}`}}>Home 
                         <div className={`line ${pathname==='/'? 'w-[80%] h-[10px] bg-[#121212]':'0%'}`}></div></li>
                         </Link>
                     </div>
                     <div>
-                        <Link to='/electronics'>
+                        <Link to='/electronics' onClick={ScrollControl}>
                         <li style={{color:`${pathname === '/electronics'? '#2f2e2e':''}`}}>Electronics</li>
                         <div className={`line ${pathname==='/electronics'? 'w-[80%] h-[10px] bg-[#121212]':'0%'}`}></div>
                         </Link>
                     </div>
                     <div>
-                        <Link to='/cosmetics'>
+                        <Link to='/cosmetics' onClick={ScrollControl}>
                         <li style={{color:`${pathname === '/cosmetics'? '#2f2e2e':''}`}}>Cosmetics</li>
                         <div className={`line ${pathname==='/cosmetics'? 'w-[80%] h-[10px] bg-[#121212]':'0%'}`}></div>
                         </Link>
                     </div>
                     <div>
-                        <Link to='/cloths'>
+                        <Link to='/cloths' onClick={ScrollControl}>
                         <li style={{color:`${pathname === '/cloths'? '#2f2e2e':''}`}}>Cloths</li>
                         <div className={`line ${pathname==='/cloths'? 'w-[80%] h-[10px] bg-[#121212]':'0%'}`}></div>
                         </Link>
                     </div>
                     <div>
-                        <Link to='/books'>
+                        <Link to='/books' onClick={ScrollControl}>
                         <li style={{color:`${pathname === '/books'? '#2f2e2e':''}`}}>Books</li>
                         <div className={`line ${pathname==='/books'? 'w-[80%] h-[10px] bg-[#121212]':'0%'}`}></div>
                         </Link>

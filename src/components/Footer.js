@@ -37,7 +37,8 @@ const Footer = () => {
 
 const FooterStyle = styled.div`
     background-color:#f4cbd3;
-    /* display:flex; */
+    display:flex;
+    flex-wrap:wrap;
     justify-content:space-between;
     padding:2rem;
     margin-top:5rem;

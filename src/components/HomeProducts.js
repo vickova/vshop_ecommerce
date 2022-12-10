@@ -4,18 +4,24 @@ import ProductCard from './ProductCard';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 
-const HomeProducts = () => {
-  const products = useSelector((state)=> state.home)
+const HomeProducts = ({products}) => {
+  const home = useSelector((state)=> state.home)
   return (
     <ProductStyle className='xl:grid xl:grid-cols-3 p-2 my-[5rem] mx-[3rem] gap-[4rem] lg:grid-cols-2 mx:block' id='products'>
         {
-            products.map((items, i)=>{
+            products?.length!==0?home.map((items, i)=>{
               if(items.home){
                 return(
                 <ProductCard key={items.id} name={items.name} description={items.description} 
                 category={items.category} image={items.image} amount={items.amount} count={items.count} items={items} id={items.id} active={items.active}/>
                 )
               }
+            }):
+            products.map((items, i)=>{
+                return(
+                <ProductCard key={items.id} name={items.name} description={items.description} 
+                category={items.category} image={items.image} amount={items.amount} count={items.count} items={items} id={items.id} active={items.active}/>
+                )
             })
         }
     </ProductStyle>
@@ -25,6 +31,8 @@ const HomeProducts = () => {
 const ProductStyle = styled.div`
     @media screen and (max-width:680px){
       margin: 0 1rem;
+      display:grid;
+      grid-template-columns:1fr 1fr;
     }
 `
 export default HomeProducts

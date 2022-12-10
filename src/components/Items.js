@@ -1,14 +1,17 @@
 import React, {useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { cartedList, deleted, cartedDecrease } from '../redux/actions';
+import { cartedList, deleted, cartedDecrease, countDecrease, countIncrease } from '../redux/actions';
 
 
-const Items = ({name, category, amount, image, count, setPrev}) => {
+const Items = ({name, category, amount, image, count, setPrev, item}) => {
     const [counter, setCounter] = useState(count);
     const cartedAway = useSelector((state)=> state.cartList);
     const dispatch = useDispatch();
     const Increase = ()=>{
+        // dispatch(countIncrease(item))
+        setCounter(item.count);
+        console.log(count)
         setCounter(counter + 1);
         cartedAway.filter((item)=> {
             if(item.name === name){
@@ -19,6 +22,7 @@ const Items = ({name, category, amount, image, count, setPrev}) => {
         })
     }
     const Decrease = ()=>{
+        // dispatch(countDecrease(item))
         if(counter > 1){
             setCounter(counter - 1)
         }

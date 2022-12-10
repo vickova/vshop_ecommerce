@@ -18,6 +18,18 @@ export const homeFresh = (items)=>{
         payload:items
     }
 }
+export const countIncrease = (items)=>{
+    return{
+        type:'COUNTINCREASE',
+        payload:items
+    }
+}
+export const countDecrease = (items)=>{
+    return{
+        type:'COUNTDECREASE',
+        payload:items
+    }
+}
 export const cartedCount = ()=>{
     return{
         type:'CARTEDINCREASE',

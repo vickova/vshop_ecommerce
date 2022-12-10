@@ -22,9 +22,9 @@ const Electronics = () => {
 }
 
 const ElectronicStyle = styled.div`
+margin-top:10rem;
 @media screen and (max-width:680px){
-      margin: 0 1rem;
-      margin-top:0;
+      margin: 5rem 1rem 0 1rem;
     }
 `
 export default Electronics

@@ -37,6 +37,43 @@ const reducer = (state=initState, action)=>{
                         return {...item}
                     })],
                 }
+                case 'COUNTINCREASE':
+                console.log(state.home)
+                return{
+                    ...state,
+                    home: [...home.map((item)=>{
+                        if(item.id === action.payload.id){
+                            console.log(state.home)
+                            console.log(item)
+                            item.count = item.count + 1
+                            return{
+                                ...item
+                            }
+                        }
+                        return {...item}
+                    })],
+                }
+                case 'COUNTDECREASE':
+                console.log(state.home)
+                return{
+                    ...state,
+                    home: [...home.map((item)=>{
+                        if(item.id === action.payload.id){
+                            console.log(state.home)
+                            console.log(item)
+                            if(item.count > 1){
+                            item.count = item.count - 1
+                            }
+                            else{
+                                item.count = item.count
+                            }
+                            return{
+                                ...item
+                            }
+                        }
+                        return {...item}
+                    })],
+                }
             case 'CARTEDINCREASE':
                 return{
                     ...state, 
