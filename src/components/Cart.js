@@ -9,14 +9,15 @@ import { countIncrease, countDecrease } from '../redux/actions';
 const Cart = ({cart, setCart}) => {
   const cartState = useSelector((state)=> state.cartState);
   const cartedList = useSelector((state)=> state.cartList);
+  const TotalCart = useSelector((state)=> state.totalCart);
   const [totalValue, setTotalValue] = useState(0)
   const [prev, setPrev ] = useState(0)
 
 
-useEffect(()=>{
-    const total = cartedList?.reduce((a, v)=> a = a+v.amount, 0);
-    setTotalValue(total)
-  })
+// useEffect(()=>{
+//     const total = cartedList?.reduce((a, v)=> a = a+v.amount, 0);
+//     setTotalValue(total)
+//   })
   return (
     <CartStyle className={`${cartState?'fixed':'static'} h-full bg-red-500 ${cartState?'block':'hidden'} p-[1rem] bg-white right-0 top-[60px] z-10 w-[50%] bg-red`}>
         <h2 className='text-center text-[1.5rem] font-bold'>Carted</h2>
@@ -31,7 +32,7 @@ useEffect(()=>{
         </div>
         <div className='flex m-[.5rem] items-center gap-[1rem] p-[.5rem] justify-between'>
           <h2 className='font-semibold text-[1.2rem] w-[30%]'>Total</h2>
-          <p>{totalValue + prev}</p>
+          <p>{(totalValue + prev).toFixed(2)}</p>
         </div>
     </CartStyle>
   )

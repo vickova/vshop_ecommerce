@@ -4,7 +4,7 @@ import { cartedList, cartedCount, homeFresh } from '../redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { act } from 'react-dom/test-utils';
 import Items from './Items';
-import { Fade } from './Animation';
+import { Fade, NavSlider, titleAnim } from './Animation';
 import { motion } from 'framer-motion';
 import { useScroll } from './UseScroll';
 
@@ -31,7 +31,7 @@ const ProductCard = ({category, name, description, image, amount, count, items, 
         <p className='bg-[#f4cbd3] px-[.8rem] py-[.5rem] rounded-[25px] text-[black] font-bold'>${amount}</p>
         </div>
         <div className='flex justify-center'>
-          <img src={image} alt={name} />
+          <img src={image} alt={name} ref={element} variants={NavSlider} initial="hidden" animate={controls}/>
         </div>
         <p className='text-[1.2rem] font-medium text-[gray]'>{description}</p>
         <button className={`w-[100%] ${active?'bg-[#d19099]':'bg-[#67111c]'} text-[#FFF] p-[1rem] hover:bg-[#a5535e]`} onClick={CartClick} disabled={active}>{active?'Added to Cart':'Add to Cart'}</button>

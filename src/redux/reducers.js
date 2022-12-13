@@ -6,8 +6,9 @@ const initState = {
     cartList:[],
     cartCount:0,
     home:home,
+    totalCart:0
 }
-
+// Use onClick
 const reducer = (state=initState, action)=>{
     switch(action.type){
         case 'CART':
@@ -39,22 +40,25 @@ const reducer = (state=initState, action)=>{
                 }
                 case 'COUNTINCREASE':
                 console.log(state.home)
+                console.log(state.totalCart)
                 return{
                     ...state,
                     home: [...home.map((item)=>{
                         if(item.id === action.payload.id){
-                            console.log(state.home)
                             console.log(item)
                             item.count = item.count + 1
+                            console.log(item)
                             return{
                                 ...item
                             }
                         }
                         return {...item}
                     })],
+                    totalCart: state.cartList?.reduce((a, v)=> a = a+v.amount, 0)
                 }
                 case 'COUNTDECREASE':
                 console.log(state.home)
+                console.log(state.totalCart)
                 return{
                     ...state,
                     home: [...home.map((item)=>{
@@ -73,6 +77,7 @@ const reducer = (state=initState, action)=>{
                         }
                         return {...item}
                     })],
+                    totalCart: state.cartList?.reduce((a, v)=> a = a+v.amount, 0)
                 }
             case 'CARTEDINCREASE':
                 return{
