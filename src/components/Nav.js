@@ -7,10 +7,11 @@ import Cart from '../images/cart.svg';
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
-import {cartAction} from '../redux/actions';
+import {cartAction, totalCarted} from '../redux/actions';
 import Burger from '../components/Burger'
+import { useEffect } from 'react';
 
-const Nav = ({cart, setCart}) => {
+const Nav = ({cartItem}) => {
     const dispatch = useDispatch();
     const count = useSelector((state)=>state.cartCount);
     const {pathname} = useLocation();
@@ -21,6 +22,7 @@ const Nav = ({cart, setCart}) => {
         window.scrollTo({top: 0, behavior: 'smooth'});
         setMenu(false)
     }
+
   return (
     <NavStyle className='block bg-blue' menu={menu}>
         <div className='sect'>
@@ -72,7 +74,7 @@ const Nav = ({cart, setCart}) => {
         </div>
         <div className='cart' onClick={()=>dispatch(cartAction())}>
             <img src={Cart} alt="cart" />
-            <p>{count}</p>
+            <p>{cartItem}</p>
         </div>
     </NavStyle>
   )

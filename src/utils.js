@@ -1,13 +1,9 @@
-import EarPhone from './images/skate-1.png';
 import HD1 from './images/laptop/HD.jpg';
 import HD14 from './images/laptop/HD14.jpg';
 import HD4 from './images/laptop/HD4.jpg';
 import HD6 from './images/laptop/HD6.jpg';
 import HD7 from './images/laptop/HD7.jpg';
 import HD9 from './images/laptop/HD9.jpg';
-import G1 from './images/laptop/G1.png';
-import G5 from './images/laptop/G5.png'
-import G2 from './images/laptop/G2.jpg';
 import G4 from './images/laptop/G4.png';
 import SAMSUNG from './images/laptop/SAMSUNG.jpg';
 import ACER from './images/laptop/ACER.jpg';
@@ -16,10 +12,7 @@ import DRESS2 from './images/cloth/DRESS2.jpg';
 import DRESS3 from './images/cloth/DRESS3.jpg';
 import DRESS4 from './images/cloth/DRESS4.jpg';
 import DRESS5 from './images/cloth/DRESS5.jpg';
-import DRESS6 from './images/cloth/DRESS6.jpg';
-import DRESS7 from './images/cloth/DRESS7.jpg';
 import DRESS8 from './images/cloth/DRESS8.jpg';
-import MEN1 from './images/cloth/MEN1.jpg';
 import MEN2 from './images/cloth/MEN2.jpg';
 import MEN3 from './images/cloth/MEN3.jpg';
 import MEN4 from './images/cloth/MEN4.jpg';
@@ -53,7 +46,6 @@ import  F6 from './images/furniture/F6.jpg';
 import  F7 from './images/furniture/F7.jpg';
 import  F8 from './images/furniture/F8.jpg';
 import  F9 from './images/furniture/F9.jpg';
-import { Fragment } from 'react';
 
 
 export let home = [
@@ -147,7 +139,7 @@ export let home = [
     },
     {
         image:G4,
-        name:'are a pair of small loudspeaker drivers',
+        name:'Small loudspeaker drivers',
         category:'Electronics',
         description:"are a pair of small loudspeaker drivers worn on or around the head over a user's ears. They are electroacoustic transducers, which convert an electrical signal to a corresponding sound",
         home:true,
@@ -227,10 +219,8 @@ export let home = [
     {
         image:MEN2,
         name:'Brown snickers',
-        name:'Grey sweat shirt',
         category:'Cloth',
         description:"Brown snicker. White and brown sole with grey shoe lace",
-        description:"Grey sweat shirt. Long sleeve. Fits all.",
         home:false,
         amount:24.43,
         count:1,
@@ -294,7 +284,7 @@ export let home = [
     },
     {
         image:CS1,
-        name:'Beekman 1802 Pure Goat Milk Whipped Body Cream 16 fl. oz.',
+        name:'Milk Whipped Body Cream 16 fl. oz.',
         category:'Cosmetics',
         description:"Beekman 1802's entire apothecary-inspired line will make you feel like you're at the spa, but our favorite is this gentle yet deeply nourishing bo",
         home:false,
@@ -371,7 +361,7 @@ export let home = [
     },
     {
         image:CS8,
-        name:'Beekman 1802 Pure Goat Milk Whipped Body Cream 16 fl. oz.',
+        name:'Pure Goat Milk Whipped Body Cream 16 fl. oz.',
         category:'Cosmetics',
         description:"LAURA GELLER NEW YORK Baked Blush-n-Brighten Marbleized Blush- Pink Buttercream Creamy Lightweight Natural Finish 0.16 Ounce (Pack of 1)",
         home:false,
@@ -405,7 +395,7 @@ export let home = [
     },
     {
         image:B2,
-        name:'Friends, Lovers, and the Big Terrible Thing: A Memoir',
+        name:'Frnds, Lovers, and the Big Terrible Thing',
         category:'Books',
         description:"Friends, Lovers, and the Big Terrible Thing: A Memoir",
         home:false,

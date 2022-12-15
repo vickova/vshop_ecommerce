@@ -1,10 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { cartedList, cartedCount, homeFresh } from '../redux/actions';
-import { useDispatch, useSelector } from 'react-redux';
-import { act } from 'react-dom/test-utils';
-import Items from './Items';
-import { Fade, NavSlider, titleAnim } from './Animation';
+import { useDispatch } from 'react-redux';
+import { Fade, NavSlider } from './Animation';
 import { motion } from 'framer-motion';
 import { useScroll } from './UseScroll';
 
@@ -13,12 +11,7 @@ import { useScroll } from './UseScroll';
 const ProductCard = ({category, name, description, image, amount, count, items, id, active}) => {
   const [element, controls] = useScroll();
   const dispatch = useDispatch();
-  const activeState = useSelector((state)=>state.active)
-  // console.log(carted)
   const CartClick = ()=>{
-    console.log('Yes')
-    console.log(items)
-    console.log({name:name, category:category, image:image, amount:amount, count:count, active:active})
     dispatch(cartedList(items));
     dispatch(homeFresh(items))
     dispatch(cartedCount())

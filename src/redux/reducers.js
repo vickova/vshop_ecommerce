@@ -1,12 +1,10 @@
-import { act } from "react-dom/test-utils";
-import Items from "../components/Items";
-import { home, electronics, cloth, furniture, books, cosmetics } from "../utils";
+import { home } from "../utils";
 const initState = {
     cartState:false,
     cartList:[],
     cartCount:0,
     home:home,
-    totalCart:0
+    totalCart:null
 }
 // Use onClick
 const reducer = (state=initState, action)=>{
@@ -17,19 +15,15 @@ const reducer = (state=initState, action)=>{
                 cartState:!state.cartState
             }
         case 'CARTEDLIST':
-            // console.log(state.home)
             return{
                 ...state,
                 cartList:[...state.cartList, action.payload]
             }
             case 'HOMEFRESH':
-                console.log(state.home)
                 return{
                     ...state,
                     home: [...home.map((item)=>{
                         if(item.id === action.payload.id){
-                            console.log(state.home)
-                            console.log(item)
                             item.active = true
                             return{
                                 ...item
@@ -39,37 +33,38 @@ const reducer = (state=initState, action)=>{
                     })],
                 }
                 case 'COUNTINCREASE':
-                console.log(state.home)
-                console.log(state.totalCart)
                 return{
                     ...state,
-                    home: [...home.map((item)=>{
+                    home: [...state.home.map((item)=>{
                         if(item.id === action.payload.id){
-                            console.log(item)
                             item.count = item.count + 1
-                            console.log(item)
                             return{
                                 ...item
                             }
                         }
                         return {...item}
                     })],
-                    totalCart: state.cartList?.reduce((a, v)=> a = a+v.amount, 0)
+                    cartList: [...state.cartList.map((item)=>{
+                        if(item.id === action.payload.id){
+                            item.count = item.count + 1
+                            return{
+                                ...item
+                            }
+                        }
+                        return {...item}
+                    })],
                 }
+
                 case 'COUNTDECREASE':
-                console.log(state.home)
-                console.log(state.totalCart)
                 return{
                     ...state,
-                    home: [...home.map((item)=>{
+                    home: [...state.home.map((item)=>{
                         if(item.id === action.payload.id){
-                            console.log(state.home)
-                            console.log(item)
                             if(item.count > 1){
                             item.count = item.count - 1
                             }
                             else{
-                                item.count = item.count
+                                return item.count
                             }
                             return{
                                 ...item
@@ -77,7 +72,20 @@ const reducer = (state=initState, action)=>{
                         }
                         return {...item}
                     })],
-                    totalCart: state.cartList?.reduce((a, v)=> a = a+v.amount, 0)
+                    cartList: [...state.cartList.map((item)=>{
+                        if(item.id === action.payload.id){
+                            if(item.count > 1){
+                            item.count = item.count - 1
+                            }
+                            else{
+                                return item.count
+                            }
+                            return{
+                                ...item
+                            }
+                        }
+                        return {...item}
+                    })],
                 }
             case 'CARTEDINCREASE':
                 return{
@@ -90,7 +98,6 @@ const reducer = (state=initState, action)=>{
                     cartCount:state.cartCount - 1
                 }
             case 'DELETE':
-                console.log(state.cartList)
                 return{
                     ...state,
                     cartList:state.cartList.filter((item)=> item.name !== action.payload),

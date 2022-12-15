@@ -7,14 +7,13 @@ import Headphone4 from '../images/Slider/headphone 4.png';
 import Left from '../images/circled-right.png';
 import Right from '../images/circled-left.png';
 import { useState } from 'react';
-import { titleAnim, Fade, photoAnim } from './Animation';
+import { titleAnim, photoAnim } from './Animation';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
     const images = [Headphone3, Headphone1, Headphone4, Headphone3, Headphone2];
     const len = images.length - 1;
     const [current, setCurrent] = useState(0);
-    console.log(current)
     const Increase = ()=>{
         if(current >=len){
             setCurrent(0)

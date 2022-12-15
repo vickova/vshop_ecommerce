@@ -5,8 +5,7 @@ import styled from 'styled-components';
 import Smile from '../components/Smile';
 import Search from '../components/Search';
 
-const Home = ({active, setActive, search, setSearch, products, setProducts}) => {
-  console.log(products)
+const Home = ({search, setSearch, products, setProducts}) => {
   return (
     <HomeStyle>
       <Search search={search} setSearch={setSearch} products={products} setProducts={setProducts}/>

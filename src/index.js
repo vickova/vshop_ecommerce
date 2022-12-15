@@ -10,6 +10,7 @@ import reducer from './redux/reducers';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>

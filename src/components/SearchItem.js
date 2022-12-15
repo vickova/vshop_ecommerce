@@ -3,7 +3,6 @@ import ProductCard from './ProductCard';
 import styled from 'styled-components';
 
 const SearchItem = ({products}) => {
-    console.log(products)
   return (
     <SearchedStyle className='xl:grid xl:grid-cols-3 p-2 my-[5rem] mx-[3rem] gap-[4rem] lg:grid-cols-2 mx:block'>
         {
