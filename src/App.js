@@ -17,11 +17,11 @@ function App() {
   const [search, setSearch] = useState('');
   const [products, setProducts] = useState([]);
   const [cartItem, setCartItem] = useState(0);
-  const cartToggle = useSelector((state)=> state.cartState);
+  const [menu, setMenu] = useState(false)
   return (
     <div className="App">
       <GlobalStyle/>
-      <Nav cartItem={cartItem} setCartItem={setCartItem}/>
+      <Nav cartItem={cartItem} setCartItem={setCartItem} menu={menu} setMenu={setMenu}/>
       <Routes>
         <Route path='/' element={<Home search={search} setSearch={setSearch} products={products} setProducts={setProducts}/>}/>
         <Route path='/electronics' element={<Electronics/>}/>

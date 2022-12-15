@@ -11,16 +11,16 @@ import {cartAction, totalCarted} from '../redux/actions';
 import Burger from '../components/Burger'
 import { useEffect } from 'react';
 
-const Nav = ({cartItem}) => {
+const Nav = ({cartItem, menu, setMenu}) => {
     const dispatch = useDispatch();
-    const count = useSelector((state)=>state.cartCount);
     const {pathname} = useLocation();
-    const [menu, setMenu] = useState(false)
-    // console.log(pathname)
-    // console.log(count)
     const ScrollControl = ()=>{
         window.scrollTo({top: 0, behavior: 'smooth'});
         setMenu(false)
+    }
+    const CartToggle = ()=>{
+        dispatch(cartAction());
+        setMenu(false);
     }
 
   return (
@@ -72,7 +72,7 @@ const Nav = ({cartItem}) => {
             </div>
         </div>
         </div>
-        <div className='cart' onClick={()=>dispatch(cartAction())}>
+        <div className='cart' onClick={CartToggle}>
             <img src={Cart} alt="cart" />
             <p>{cartItem}</p>
         </div>

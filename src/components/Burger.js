@@ -1,9 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useDispatch } from 'react-redux';
+import { cartAction } from '../redux/actions';
 
 const Burger = ({menu, setMenu}) => {
+  const dispatch = useDispatch()
+  const MenuToggle = ()=>{
+    setMenu(false);
+  }
   return (
-    <StyledBurger menu={menu} onClick={()=>setMenu(!menu)}>
+    <StyledBurger menu={menu} onClick={MenuToggle}>
         <div></div>
         <div></div>
         <div></div>
