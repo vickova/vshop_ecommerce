@@ -6,7 +6,7 @@ import { cartAction } from '../redux/actions';
 const Burger = ({menu, setMenu}) => {
   const dispatch = useDispatch()
   const MenuToggle = ()=>{
-    setMenu(false);
+    setMenu(!menu);
   }
   return (
     <StyledBurger menu={menu} onClick={MenuToggle}>

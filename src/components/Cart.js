@@ -21,6 +21,7 @@ const Cart = ({cartItem, setCartItem}) => {
         <div className='overflow-auto h-[70%]'>
         {cartedList.length === 0?(<h2 className='font-bold text-[1.5rem] justify-center text-center'>Cart is Empty</h2>) :
           <table border='2'>
+          <thead>
           <tr>
             <th>Name</th>
             <th>Quantity</th>
@@ -28,6 +29,8 @@ const Cart = ({cartItem, setCartItem}) => {
             <th>Price</th>
             <th>Delete</th>
           </tr>
+          </thead>
+          <tbody>
           {
             cartedList.map((item, i)=>{
               totalCartPrice += item.amount * item.count;
@@ -37,6 +40,7 @@ const Cart = ({cartItem, setCartItem}) => {
               )
             })
           }
+          </tbody>
           </table>
         }
         </div>
