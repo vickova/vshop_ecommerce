@@ -75,10 +75,10 @@ const reducer = (state=initState, action)=>{
                     cartList: [...state.cartList.map((item)=>{
                         if(item.id === action.payload.id){
                             if(item.count > 1){
-                            item.count = item.count - 1
+                            item.count = item.count - 1;
                             }
                             else{
-                                return item.count
+                                item.count = item.count
                             }
                             return{
                                 ...item
